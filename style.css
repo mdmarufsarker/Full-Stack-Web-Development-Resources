@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    background: #111;
+    color: aqua;
+    font-family: 'Balsamiq Sans', cursive;
+}
+h1.title{
+    text-align: center;
+    padding: 2rem;
+    font-size: 40px;
+    font-weight: bold;
+}
+.container{
+    padding: 1rem;
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 1rem .5rem; 
+}
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; 
+    grid-gap: 1rem;
+}
+.content > div{
+    margin: 0 auto;
+}
+.topics{
+    text-align: center;
+    padding: 5px 10px;
+    background: cyan;
+    color: #000;
+    margin: 0 auto;
+    width: 350px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+ol li{
+    line-height: 1.5;
+    margin: 1rem 3.5rem;
+    text-align: left;
+    padding-left: 1rem;
+}
+a{
+    text-decoration: none;
+}
+ol li a,
+a li{
+    color: cyan;
+    text-decoration: none;
+    cursor: pointer;
+}
+ol li:hover,
+ol li a:hover{
+    color: crimson;
+    font-size: 16.5px;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+footer h2{
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 1200px){
+    .content .others{
+        display: none;
+        visibility: hidden;
+        background:red;
+    }
+}
+@media only screen and (max-width: 800px){
+    .content .others{
+        display: none;
+        visibility: hidden;
+        background:red;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 800px){
+    .content{
+        grid-template-columns: 1fr;
+    }
+    h1.title{
+        text-align: center;
+        padding: 2rem;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
