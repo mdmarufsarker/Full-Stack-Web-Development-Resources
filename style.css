@@ -77,6 +77,10 @@ footer h2{
     text-align: center;
     padding: 2rem 0;
 }
+.copyright{
+    color: crimson;
+    text-decoration: none;
+}
 
 
 /* Media Queries */
