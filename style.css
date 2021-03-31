@@ -2,7 +2,8 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 html, body{
     background: #111;
@@ -25,10 +26,25 @@ h1.title{
     padding: 1rem .5rem; 
 }
 .content{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr; 
     grid-gap: 1rem;
+}
+.content > *:nth-child(1){
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+.content > *:nth-child(2){
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+.content > *:nth-child(3){
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
 }
 .content > div{
     margin: 0 auto;
@@ -100,11 +116,13 @@ footer h2{
 }
 @media only screen and (max-width: 1200px){
     .content{
+        -ms-grid-columns: 1fr 1rem 1fr;
         grid-template-columns: 1fr 1fr;
     }
 }
 @media only screen and (max-width: 800px){
     .content{
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
     h1.title{
@@ -113,5 +131,67 @@ footer h2{
         font-size: 30px;
         font-weight: bold;
     }
+    .topics{
+        text-align: center;
+        padding: 5px 5px;
+        background: cyan;
+        color: #000;
+        margin: 0 50px;
+        width: 250px;
+    }
+    ol li{
+        margin: 1rem 2rem;
+        width: 300px;
+        padding-left: 1rem;
+    }
 }
-
+@media only screen and (max-width: 768px){
+    .topics{
+        margin: 0 81px;
+        width: 360px;
+    }
+    ol li{
+        margin: 1rem 2rem;
+        width: 380px;
+        padding-left: 2rem;
+    }
+}
+@media only screen and (max-width: 700px){
+    .topics{
+        width: 308px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .topics{
+        width: 308px;
+    }
+}
+@media only screen and (max-width: 450px){
+    .topics{
+        margin: 0 70px;
+        width: 250px;
+    }
+    ol li {
+        width: 320px;
+        padding-left: 1rem;
+    }
+}
+@media only screen and (max-width: 400px){
+    .topics{
+        margin: 0 70px;
+        width: 250px;
+    }
+    ol li {
+        width: 300px;
+        padding-left: 1rem;
+    }
+}
+@media only screen and (max-width: 350px){
+    .topics{
+        margin: 0 auto;
+        width: 250px;
+    }
+    ol li{
+        width: 250px;
+    }
+}
