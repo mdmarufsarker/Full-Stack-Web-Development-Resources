@@ -2,7 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
@@ -10,6 +10,7 @@ html, body{
     background: #111;
     color: aqua;
     font-family: 'Balsamiq Sans', cursive;
+    cursor: default;
 }
 h1.title{
     text-align: center;
